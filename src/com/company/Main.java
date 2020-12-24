@@ -76,12 +76,18 @@ public class Main
         MyLamda1 mylamda1;
         MyLamda1 mylamda2;
         MyLamda2 mylamda3;
+        MyLamda1 mylamda4;
+        MyLamda1 mylamda5;
+        MyLamda2 mylamda6;
+        MyLamda2 mylamda7;
+        MyLamda2 mylamda8;
+        MyLamda2 mylamda9;
         
-        /*int a1 = w_year_1 / 4 - w_year_1 / 100 + w_year_1 / 400;*/
+        /*int result1 = w_year_1 / 4 - w_year_1 / 100 + w_year_1 / 400;*/
         mylamda1 = (intTest1) -> intTest1 / 4 - intTest1 / 100 + intTest1 / 400;
         int result1 = mylamda1.l_1(w_year_1);
         
-        /*int a2 = w_year_2 / 4 - w_year_2 / 100 + w_year_2 / 400;*/
+        /*int result2 = w_year_2 / 4 - w_year_2 / 100 + w_year_2 / 400;*/
         mylamda2 = (intTest1) -> intTest1 / 4 - intTest1 / 100 + intTest1 / 400;
         int result2 = mylamda2.l_1(w_year_2);
         
@@ -102,12 +108,30 @@ public class Main
             }
             else
             {
-                w_year_1 = w_year_1 * 365;
-                w_year_2 = w_year_2 * 365;
-                int date1 = w_day_1 + w_year_1;
-                int date2 = w_day_2 + w_year_2;
-                int date = date1 - date2;
-                System.out.print(date + result3);
+                /*w_year_1 = w_year_1 * 365;*/
+                mylamda4 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result4 = mylamda4.l_1(w_year_1);
+                
+                /*w_year_2 = w_year_2 * 365;*/
+                mylamda5 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result5 = mylamda5.l_1(w_year_2);
+                
+                /*int result6 = w_day_1 + result4;*/
+                mylamda6 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result6 = mylamda6.l_1(w_day_1, result4);
+                
+                /*int result7 = w_day_2 + result5;*/
+                mylamda7 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result7 = mylamda7.l_1(w_day_2, result5);
+                
+                /*int result8 = result6 - result7;*/
+                mylamda8 = (intTest1, intTest2) -> intTest1 - intTest2;
+                int result8 = mylamda8.l_1(result6, result7);
+
+                /*System.out.print(result8 + result3);*/
+                mylamda9 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result9 = mylamda9.l_1(result8, result3);
+                System.out.print(result9);
             }
         }
         else if (w_month_1 == 2 || w_month_2 == 2)
@@ -121,9 +145,9 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = w_day_1 + w_year_1;
-                int date2 = w_day_2 + w_year_2;
-                int date = date1 - date2;
+                int result6 = w_day_1 + w_year_1;
+                int result7 = w_day_2 + w_year_2;
+                int date = result6 - result7;
                 System.out.print(date + result3);
             }
         }
@@ -138,9 +162,9 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = w_day_1 + w_year_1;
-                int date2 = w_day_2 + w_year_2;
-                int date = date1 - date2;
+                int result6 = w_day_1 + w_year_1;
+                int result7 = w_day_2 + w_year_2;
+                int date = result6 - result7;
                 System.out.print(date + result3);
             }
         }
@@ -155,9 +179,9 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = w_day_1 + w_year_1;
-                int date2 = w_day_2 + w_year_2;
-                int date = date1 - date2;
+                int result6 = w_day_1 + w_year_1;
+                int result7 = w_day_2 + w_year_2;
+                int date = result6 - result7;
                 System.out.print(date + result3);
             }
         }
@@ -172,9 +196,9 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = w_day_1 + w_year_1;
-                int date2 = w_day_2 + w_year_2;
-                int date = date1 - date2;
+                int result6 = w_day_1 + w_year_1;
+                int result7 = w_day_2 + w_year_2;
+                int date = result6 - result7;
                 System.out.print(date + result3);
             }
         }
@@ -189,9 +213,9 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = w_day_1 + w_year_1;
-                int date2 = w_day_2 + w_year_2;
-                int date = date1 - date2;
+                int result6 = w_day_1 + w_year_1;
+                int result7 = w_day_2 + w_year_2;
+                int date = result6 - result7;
                 System.out.print(date + result3);
             }
         }
@@ -206,9 +230,9 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = w_day_1 + w_year_1;
-                int date2 = w_day_2 + w_year_2;
-                int date = date1 - date2;
+                int result6 = w_day_1 + w_year_1;
+                int result7 = w_day_2 + w_year_2;
+                int date = result6 - result7;
                 System.out.print(date + result3);
             }
         }
@@ -223,9 +247,9 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = w_day_1 + w_year_1;
-                int date2 = w_day_2 + w_year_2;
-                int date = date1 - date2;
+                int result6 = w_day_1 + w_year_1;
+                int result7 = w_day_2 + w_year_2;
+                int date = result6 - result7;
                 System.out.print(date + result3);
             }
         }
@@ -240,9 +264,9 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = w_day_1 + w_year_1;
-                int date2 = w_day_2 + w_year_2;
-                int date = date1 - date2;
+                int result6 = w_day_1 + w_year_1;
+                int result7 = w_day_2 + w_year_2;
+                int date = result6 - result7;
                 System.out.print(date + result3);
             }
         }
@@ -257,9 +281,9 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = w_day_1 + w_year_1;
-                int date2 = w_day_2 + w_year_2;
-                int date = date1 - date2;
+                int result6 = w_day_1 + w_year_1;
+                int result7 = w_day_2 + w_year_2;
+                int date = result6 - result7;
                 System.out.print(date + result3);
             }
         }
@@ -274,9 +298,9 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = w_day_1 + w_year_1;
-                int date2 = w_day_2 + w_year_2;
-                int date = date1 - date2;
+                int result6 = w_day_1 + w_year_1;
+                int result7 = w_day_2 + w_year_2;
+                int date = result6 - result7;
                 System.out.print(date + result3);
             }
         }
@@ -291,9 +315,9 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = w_day_1 + w_year_1;
-                int date2 = w_day_2 + w_year_2;
-                int date = date1 - date2;
+                int result6 = w_day_1 + w_year_1;
+                int result7 = w_day_2 + w_year_2;
+                int date = result6 - result7;
                 System.out.print(date + result3);
             }
         }
