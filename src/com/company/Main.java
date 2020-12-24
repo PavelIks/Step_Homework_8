@@ -11,10 +11,7 @@ public class Main
     {
         int l_1(int intTest1, int intTest2);
     }
-    /*interface MyLamda3
-    {
-        int l_1(int intTest1, int intTest2, int intTest3);
-    }*/
+
     public static void main(String[] args)
     {
         /*Домашнее задание*/
@@ -25,28 +22,37 @@ public class Main
         3) Подсчёт количества полных недель между двумя датами;
         4) Подсчёт дня недели по полученной дате. Например, 20 июля 1969 года — воскресенье.*/
 
-        /*MyLamda1 mylamda1;
-        mylamda1 = (intTest1) -> intTest1;
-        Scanner in1 = new Scanner(System.in);
+        /*Scanner in0 = new Scanner(System.in);
         System.out.print("Введите год: ");
-        int intTest1 = in1.nextInt();
-        if (intTest1 % 4 == 0)
+        int numb1 = in0.nextInt();
+
+        MyLamda1 mylamda1;
+        MyLamda1 mylamda2;
+        MyLamda1 mylamda3;
+
+        mylamda1 = (intTest1) -> numb1 % 4;
+        int result1 = mylamda1.l_1(numb1);
+
+        if (result1 == 0)
         {
-            if ((intTest1 % 100 != 0) || (intTest1 % 400 == 0))
+            mylamda2 = (intTest1) -> numb1 % 100;
+            int result2 = mylamda2.l_1(numb1);
+
+            mylamda3 = (intTest1) -> numb1 % 400;
+            int result3 = mylamda3.l_1(numb1);
+
+            if ((result2 != 0) || (result3 == 0))
             {
-                System.out.print(mylamda1.l_1(intTest1));
-                System.out.println(" - высокосный!");
+                System.out.println(numb1 + " г. - высокосный!");
             }
             else
             {
-                System.out.print(mylamda1.l_1(intTest1));
-                System.out.println(" - не високосный!");
+                System.out.println(numb1 + " г. - не високосный!");
             }
         }
         else
         {
-            System.out.print(mylamda1.l_1(intTest1));
-            System.out.println(" - не високосный!");
+            System.out.println(numb1 + " г. - не високосный!");
         }*/
 
         Scanner in1 = new Scanner(System.in);
@@ -82,19 +88,19 @@ public class Main
         MyLamda2 mylamda7;
         MyLamda2 mylamda8;
         MyLamda2 mylamda9;
-        
+
         /*int result1 = w_year_1 / 4 - w_year_1 / 100 + w_year_1 / 400;*/
         mylamda1 = (intTest1) -> intTest1 / 4 - intTest1 / 100 + intTest1 / 400;
         int result1 = mylamda1.l_1(w_year_1);
-        
+
         /*int result2 = w_year_2 / 4 - w_year_2 / 100 + w_year_2 / 400;*/
         mylamda2 = (intTest1) -> intTest1 / 4 - intTest1 / 100 + intTest1 / 400;
         int result2 = mylamda2.l_1(w_year_2);
-        
+
         /*int result3 = result1 - result2;*/
         mylamda3 = (intTest1, intTest2) -> result1 - result2;
         int result3 = mylamda3.l_1(result1, result2);
-        
+
         if (w_month_1 > 12 || w_month_2 > 12)
         {
             System.out.print("Месяцев менее 12!");
@@ -111,19 +117,19 @@ public class Main
                 /*w_year_1 = w_year_1 * 365;*/
                 mylamda4 = (intTest1) -> intTest1 = intTest1 * 365;
                 int result4 = mylamda4.l_1(w_year_1);
-                
+
                 /*w_year_2 = w_year_2 * 365;*/
                 mylamda5 = (intTest1) -> intTest1 = intTest1 * 365;
                 int result5 = mylamda5.l_1(w_year_2);
-                
+
                 /*int result6 = w_day_1 + result4;*/
                 mylamda6 = (intTest1, intTest2) -> intTest1 + intTest2;
                 int result6 = mylamda6.l_1(w_day_1, result4);
-                
+
                 /*int result7 = w_day_2 + result5;*/
                 mylamda7 = (intTest1, intTest2) -> intTest1 + intTest2;
                 int result7 = mylamda7.l_1(w_day_2, result5);
-                
+
                 /*int result8 = result6 - result7;*/
                 mylamda8 = (intTest1, intTest2) -> intTest1 - intTest2;
                 int result8 = mylamda8.l_1(result6, result7);
@@ -143,7 +149,6 @@ public class Main
             }
             else
             {
-                w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
                 int result6 = w_day_1 + w_year_1;
                 int result7 = w_day_2 + w_year_2;
