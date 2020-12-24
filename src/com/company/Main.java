@@ -138,8 +138,13 @@ public class Main
 
                 /*int result8 = result6 - result7;*/
                 mylamda8 = (intTest1, intTest2) -> intTest1 - intTest2;
-                int result8 = mylamda8.l_1(result6, result7);
-
+                if(result6 > result7)
+                {
+                    int tmp = result6;
+                    result6 = result7;
+                    result7 = tmp;
+                }
+                int result8 = mylamda8.l_1(result7, result6);
                 /*System.out.print(result8 + result3);*/
                 mylamda9 = (intTest1, intTest2) -> intTest1 + intTest2;
                 int result9 = mylamda9.l_1(result8, result3);
@@ -190,12 +195,30 @@ public class Main
             }
             else
             {
-                w_year_1 = w_year_1 * 365;
-                w_year_2 = w_year_2 * 365;
-                int result6 = w_day_1 + w_year_1;
-                int result7 = w_day_2 + w_year_2;
-                int date = result6 - result7;
-                System.out.print(date + result3);
+                /*w_year_1 = w_year_1 * 365;*/
+                mylamda10 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result10 = mylamda10.l_1(w_year_1);
+
+                /*w_year_2 = w_year_2 * 365;*/
+                mylamda11 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result11 = mylamda11.l_1(w_year_2);
+
+                /*int result12 = w_day_1 + result10;*/
+                mylamda12 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result12 = mylamda12.l_1(w_day_1, result10);
+
+                /*int result13 = w_day_2 + result11;*/
+                mylamda13 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result13 = mylamda13.l_1(w_day_2, result11);
+
+                /*int result14 = result12 - result13;*/
+                mylamda14 = (intTest1, intTest2) -> intTest1 - intTest2;
+                int result14 = mylamda14.l_1(result12, result13);
+
+                /*System.out.print(result14 + result3);*/
+                mylamda15 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result15 = mylamda15.l_1(result14, result3);
+                System.out.print(result15);
             }
         }
         else if (w_month_1 == 4 || w_month_2 == 4)
@@ -207,12 +230,30 @@ public class Main
             }
             else
             {
-                w_year_1 = w_year_1 * 365;
-                w_year_2 = w_year_2 * 365;
-                int result6 = w_day_1 + w_year_1;
-                int result7 = w_day_2 + w_year_2;
-                int date = result6 - result7;
-                System.out.print(date + result3);
+                /*w_year_1 = w_year_1 * 365;*/
+                mylamda10 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result10 = mylamda10.l_1(w_year_1);
+
+                /*w_year_2 = w_year_2 * 365;*/
+                mylamda11 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result11 = mylamda11.l_1(w_year_2);
+
+                /*int result12 = w_day_1 + result10;*/
+                mylamda12 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result12 = mylamda12.l_1(w_day_1, result10);
+
+                /*int result13 = w_day_2 + result11;*/
+                mylamda13 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result13 = mylamda13.l_1(w_day_2, result11);
+
+                /*int result14 = result12 - result13;*/
+                mylamda14 = (intTest1, intTest2) -> intTest1 - intTest2;
+                int result14 = mylamda14.l_1(result12, result13);
+
+                /*System.out.print(result14 + result3);*/
+                mylamda15 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result15 = mylamda15.l_1(result14, result3);
+                System.out.print(result15);
             }
         }
         else if (w_month_1 == 5 || w_month_2 == 5)
@@ -224,12 +265,30 @@ public class Main
             }
             else
             {
-                w_year_1 = w_year_1 * 365;
-                w_year_2 = w_year_2 * 365;
-                int result6 = w_day_1 + w_year_1;
-                int result7 = w_day_2 + w_year_2;
-                int date = result6 - result7;
-                System.out.print(date + result3);
+                /*w_year_1 = w_year_1 * 365;*/
+                mylamda10 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result10 = mylamda10.l_1(w_year_1);
+
+                /*w_year_2 = w_year_2 * 365;*/
+                mylamda11 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result11 = mylamda11.l_1(w_year_2);
+
+                /*int result12 = w_day_1 + result10;*/
+                mylamda12 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result12 = mylamda12.l_1(w_day_1, result10);
+
+                /*int result13 = w_day_2 + result11;*/
+                mylamda13 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result13 = mylamda13.l_1(w_day_2, result11);
+
+                /*int result14 = result12 - result13;*/
+                mylamda14 = (intTest1, intTest2) -> intTest1 - intTest2;
+                int result14 = mylamda14.l_1(result12, result13);
+
+                /*System.out.print(result14 + result3);*/
+                mylamda15 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result15 = mylamda15.l_1(result14, result3);
+                System.out.print(result15);
             }
         }
         else if (w_month_1 == 6 || w_month_2 == 6)
@@ -241,12 +300,30 @@ public class Main
             }
             else
             {
-                w_year_1 = w_year_1 * 365;
-                w_year_2 = w_year_2 * 365;
-                int result6 = w_day_1 + w_year_1;
-                int result7 = w_day_2 + w_year_2;
-                int date = result6 - result7;
-                System.out.print(date + result3);
+                /*w_year_1 = w_year_1 * 365;*/
+                mylamda10 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result10 = mylamda10.l_1(w_year_1);
+
+                /*w_year_2 = w_year_2 * 365;*/
+                mylamda11 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result11 = mylamda11.l_1(w_year_2);
+
+                /*int result12 = w_day_1 + result10;*/
+                mylamda12 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result12 = mylamda12.l_1(w_day_1, result10);
+
+                /*int result13 = w_day_2 + result11;*/
+                mylamda13 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result13 = mylamda13.l_1(w_day_2, result11);
+
+                /*int result14 = result12 - result13;*/
+                mylamda14 = (intTest1, intTest2) -> intTest1 - intTest2;
+                int result14 = mylamda14.l_1(result12, result13);
+
+                /*System.out.print(result14 + result3);*/
+                mylamda15 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result15 = mylamda15.l_1(result14, result3);
+                System.out.print(result15);
             }
         }
         else if (w_month_1 == 7 || w_month_2 == 7)
@@ -258,12 +335,30 @@ public class Main
             }
             else
             {
-                w_year_1 = w_year_1 * 365;
-                w_year_2 = w_year_2 * 365;
-                int result6 = w_day_1 + w_year_1;
-                int result7 = w_day_2 + w_year_2;
-                int date = result6 - result7;
-                System.out.print(date + result3);
+                /*w_year_1 = w_year_1 * 365;*/
+                mylamda10 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result10 = mylamda10.l_1(w_year_1);
+
+                /*w_year_2 = w_year_2 * 365;*/
+                mylamda11 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result11 = mylamda11.l_1(w_year_2);
+
+                /*int result12 = w_day_1 + result10;*/
+                mylamda12 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result12 = mylamda12.l_1(w_day_1, result10);
+
+                /*int result13 = w_day_2 + result11;*/
+                mylamda13 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result13 = mylamda13.l_1(w_day_2, result11);
+
+                /*int result14 = result12 - result13;*/
+                mylamda14 = (intTest1, intTest2) -> intTest1 - intTest2;
+                int result14 = mylamda14.l_1(result12, result13);
+
+                /*System.out.print(result14 + result3);*/
+                mylamda15 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result15 = mylamda15.l_1(result14, result3);
+                System.out.print(result15);
             }
         }
         else if (w_month_1 == 8 || w_month_2 == 8)
@@ -275,12 +370,30 @@ public class Main
             }
             else
             {
-                w_year_1 = w_year_1 * 365;
-                w_year_2 = w_year_2 * 365;
-                int result6 = w_day_1 + w_year_1;
-                int result7 = w_day_2 + w_year_2;
-                int date = result6 - result7;
-                System.out.print(date + result3);
+                /*w_year_1 = w_year_1 * 365;*/
+                mylamda10 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result10 = mylamda10.l_1(w_year_1);
+
+                /*w_year_2 = w_year_2 * 365;*/
+                mylamda11 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result11 = mylamda11.l_1(w_year_2);
+
+                /*int result12 = w_day_1 + result10;*/
+                mylamda12 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result12 = mylamda12.l_1(w_day_1, result10);
+
+                /*int result13 = w_day_2 + result11;*/
+                mylamda13 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result13 = mylamda13.l_1(w_day_2, result11);
+
+                /*int result14 = result12 - result13;*/
+                mylamda14 = (intTest1, intTest2) -> intTest1 - intTest2;
+                int result14 = mylamda14.l_1(result12, result13);
+
+                /*System.out.print(result14 + result3);*/
+                mylamda15 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result15 = mylamda15.l_1(result14, result3);
+                System.out.print(result15);
             }
         }
         else if (w_month_1 == 9 || w_month_2 == 9)
@@ -292,12 +405,30 @@ public class Main
             }
             else
             {
-                w_year_1 = w_year_1 * 365;
-                w_year_2 = w_year_2 * 365;
-                int result6 = w_day_1 + w_year_1;
-                int result7 = w_day_2 + w_year_2;
-                int date = result6 - result7;
-                System.out.print(date + result3);
+                /*w_year_1 = w_year_1 * 365;*/
+                mylamda10 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result10 = mylamda10.l_1(w_year_1);
+
+                /*w_year_2 = w_year_2 * 365;*/
+                mylamda11 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result11 = mylamda11.l_1(w_year_2);
+
+                /*int result12 = w_day_1 + result10;*/
+                mylamda12 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result12 = mylamda12.l_1(w_day_1, result10);
+
+                /*int result13 = w_day_2 + result11;*/
+                mylamda13 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result13 = mylamda13.l_1(w_day_2, result11);
+
+                /*int result14 = result12 - result13;*/
+                mylamda14 = (intTest1, intTest2) -> intTest1 - intTest2;
+                int result14 = mylamda14.l_1(result12, result13);
+
+                /*System.out.print(result14 + result3);*/
+                mylamda15 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result15 = mylamda15.l_1(result14, result3);
+                System.out.print(result15);
             }
         }
         else if (w_month_1 == 10 || w_month_2 == 10)
@@ -309,12 +440,30 @@ public class Main
             }
             else
             {
-                w_year_1 = w_year_1 * 365;
-                w_year_2 = w_year_2 * 365;
-                int result6 = w_day_1 + w_year_1;
-                int result7 = w_day_2 + w_year_2;
-                int date = result6 - result7;
-                System.out.print(date + result3);
+                /*w_year_1 = w_year_1 * 365;*/
+                mylamda10 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result10 = mylamda10.l_1(w_year_1);
+
+                /*w_year_2 = w_year_2 * 365;*/
+                mylamda11 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result11 = mylamda11.l_1(w_year_2);
+
+                /*int result12 = w_day_1 + result10;*/
+                mylamda12 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result12 = mylamda12.l_1(w_day_1, result10);
+
+                /*int result13 = w_day_2 + result11;*/
+                mylamda13 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result13 = mylamda13.l_1(w_day_2, result11);
+
+                /*int result14 = result12 - result13;*/
+                mylamda14 = (intTest1, intTest2) -> intTest1 - intTest2;
+                int result14 = mylamda14.l_1(result12, result13);
+
+                /*System.out.print(result14 + result3);*/
+                mylamda15 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result15 = mylamda15.l_1(result14, result3);
+                System.out.print(result15);
             }
         }
         else if (w_month_1 == 11 || w_month_2 == 11)
@@ -326,12 +475,30 @@ public class Main
             }
             else
             {
-                w_year_1 = w_year_1 * 365;
-                w_year_2 = w_year_2 * 365;
-                int result6 = w_day_1 + w_year_1;
-                int result7 = w_day_2 + w_year_2;
-                int date = result6 - result7;
-                System.out.print(date + result3);
+                /*w_year_1 = w_year_1 * 365;*/
+                mylamda10 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result10 = mylamda10.l_1(w_year_1);
+
+                /*w_year_2 = w_year_2 * 365;*/
+                mylamda11 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result11 = mylamda11.l_1(w_year_2);
+
+                /*int result12 = w_day_1 + result10;*/
+                mylamda12 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result12 = mylamda12.l_1(w_day_1, result10);
+
+                /*int result13 = w_day_2 + result11;*/
+                mylamda13 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result13 = mylamda13.l_1(w_day_2, result11);
+
+                /*int result14 = result12 - result13;*/
+                mylamda14 = (intTest1, intTest2) -> intTest1 - intTest2;
+                int result14 = mylamda14.l_1(result12, result13);
+
+                /*System.out.print(result14 + result3);*/
+                mylamda15 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result15 = mylamda15.l_1(result14, result3);
+                System.out.print(result15);
             }
         }
         else if (w_month_1 == 12 || w_month_2 == 12)
@@ -343,12 +510,31 @@ public class Main
             }
             else
             {
-                w_year_1 = w_year_1 * 365;
-                w_year_2 = w_year_2 * 365;
-                int result6 = w_day_1 + w_year_1;
-                int result7 = w_day_2 + w_year_2;
-                int date = result6 - result7;
-                System.out.print(date + result3);
+                /*w_year_1 = w_year_1 * 365;*/
+                mylamda10 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result10 = mylamda10.l_1(w_year_1);
+
+                /*w_year_2 = w_year_2 * 365;*/
+                mylamda11 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result11 = mylamda11.l_1(w_year_2);
+
+                /*int result12 = w_day_1 + result10;*/
+                mylamda12 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result12 = mylamda12.l_1(w_day_1, result10);
+
+                /*int result13 = w_day_2 + result11;*/
+                mylamda13 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result13 = mylamda13.l_1(w_day_2, result11);
+
+                /*int result14 = result12 - result13;*/
+                mylamda14 = (intTest1, intTest2) -> intTest1 - intTest2;
+                int result14 = mylamda14.l_1(result12, result13);
+
+                /*System.out.print(result14 + result3);*/
+                mylamda15 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result15 = mylamda15.l_1(result14, result3);
+
+                System.out.print(result15);
             }
         }
     }
