@@ -88,6 +88,12 @@ public class Main
         MyLamda2 mylamda7;
         MyLamda2 mylamda8;
         MyLamda2 mylamda9;
+        MyLamda1 mylamda10;
+        MyLamda1 mylamda11;
+        MyLamda2 mylamda12;
+        MyLamda2 mylamda13;
+        MyLamda2 mylamda14;
+        MyLamda2 mylamda15;
 
         /*int result1 = w_year_1 / 4 - w_year_1 / 100 + w_year_1 / 400;*/
         mylamda1 = (intTest1) -> intTest1 / 4 - intTest1 / 100 + intTest1 / 400;
@@ -149,11 +155,30 @@ public class Main
             }
             else
             {
-                w_year_2 = w_year_2 * 365;
-                int result6 = w_day_1 + w_year_1;
-                int result7 = w_day_2 + w_year_2;
-                int date = result6 - result7;
-                System.out.print(date + result3);
+                /*w_year_1 = w_year_1 * 365;*/
+                mylamda10 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result10 = mylamda10.l_1(w_year_1);
+
+                /*w_year_2 = w_year_2 * 365;*/
+                mylamda11 = (intTest1) -> intTest1 = intTest1 * 365;
+                int result11 = mylamda11.l_1(w_year_2);
+
+                /*int result12 = w_day_1 + result10;*/
+                mylamda12 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result12 = mylamda12.l_1(w_day_1, result10);
+
+                /*int result13 = w_day_2 + result11;*/
+                mylamda13 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result13 = mylamda13.l_1(w_day_2, result11);
+
+                /*int result14 = result12 - result13;*/
+                mylamda14 = (intTest1, intTest2) -> intTest1 - intTest2;
+                int result14 = mylamda14.l_1(result12, result13);
+
+                /*System.out.print(result14 + result3);*/
+                mylamda15 = (intTest1, intTest2) -> intTest1 + intTest2;
+                int result15 = mylamda15.l_1(result14, result3);
+                System.out.print(result15);
             }
         }
         else if (w_month_1 == 3 || w_month_2 == 3)
