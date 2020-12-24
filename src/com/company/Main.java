@@ -9,8 +9,12 @@ public class Main
     }
     interface MyLamda2
     {
-        int l_1(int intTest1, int intTest2, int intTest3);
+        int l_1(int intTest1, int intTest2);
     }
+    /*interface MyLamda3
+    {
+        int l_1(int intTest1, int intTest2, int intTest3);
+    }*/
     public static void main(String[] args)
     {
         /*Домашнее задание*/
@@ -45,20 +49,6 @@ public class Main
             System.out.println(" - не високосный!");
         }*/
 
-//        MyLamda1 mylamda1;
-//        MyLamda1 mylamda2;
-//        MyLamda1 mylamda3;
-//        MyLamda1 mylamda4;
-//        MyLamda1 mylamda5;
-//        MyLamda1 mylamda6;
-//        MyLamda1 mylamda7;
-//        mylamda1 = (w_day_1) -> w_day_1;
-//        mylamda2 = (w_month_1) -> w_month_1;
-//        mylamda3 = (w_year_1) -> w_year_1;
-//        mylamda4 = (w_day_2) -> w_day_2;
-//        mylamda5 = (w_month_2) -> w_month_2;
-//        mylamda6 = (w_year_2) -> w_year_2;
-
         Scanner in1 = new Scanner(System.in);
         System.out.print("Введите 1-ю дату - день: ");
         int w_day_1 = in1.nextInt();
@@ -83,13 +73,22 @@ public class Main
         System.out.print("Введите 2-ю дату - год: ");
         int w_year_2 = in6.nextInt();
 
-        /*int a1 = w_year_1 / 4 - w_year_1 / 100 + w_year_1 / 400;*/
         MyLamda1 mylamda1;
+        MyLamda1 mylamda2;
+        MyLamda2 mylamda3;
+        
+        /*int a1 = w_year_1 / 4 - w_year_1 / 100 + w_year_1 / 400;*/
         mylamda1 = (intTest1) -> intTest1 / 4 - intTest1 / 100 + intTest1 / 400;
         int result1 = mylamda1.l_1(w_year_1);
-
-        int a2 = w_year_2 / 4 - w_year_2 / 100 + w_year_2 / 400;
-        int a = result1 - a2;
+        
+        /*int a2 = w_year_2 / 4 - w_year_2 / 100 + w_year_2 / 400;*/
+        mylamda2 = (intTest1) -> intTest1 / 4 - intTest1 / 100 + intTest1 / 400;
+        int result2 = mylamda2.l_1(w_year_2);
+        
+        /*int result3 = result1 - result2;*/
+        mylamda3 = (intTest1, intTest2) -> result1 - result2;
+        int result3 = mylamda3.l_1(result1, result2);
+        
         if (w_month_1 > 12 || w_month_2 > 12)
         {
             System.out.print("Месяцев менее 12!");
@@ -108,7 +107,7 @@ public class Main
                 int date1 = w_day_1 + w_year_1;
                 int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
-                System.out.print(date + a);
+                System.out.print(date + result3);
             }
         }
         else if (w_month_1 == 2 || w_month_2 == 2)
@@ -125,7 +124,7 @@ public class Main
                 int date1 = w_day_1 + w_year_1;
                 int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
-                System.out.print(date + a);
+                System.out.print(date + result3);
             }
         }
         else if (w_month_1 == 3 || w_month_2 == 3)
@@ -142,7 +141,7 @@ public class Main
                 int date1 = w_day_1 + w_year_1;
                 int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
-                System.out.print(date + a);
+                System.out.print(date + result3);
             }
         }
         else if (w_month_1 == 4 || w_month_2 == 4)
@@ -159,7 +158,7 @@ public class Main
                 int date1 = w_day_1 + w_year_1;
                 int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
-                System.out.print(date + a);
+                System.out.print(date + result3);
             }
         }
         else if (w_month_1 == 5 || w_month_2 == 5)
@@ -176,7 +175,7 @@ public class Main
                 int date1 = w_day_1 + w_year_1;
                 int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
-                System.out.print(date + a);
+                System.out.print(date + result3);
             }
         }
         else if (w_month_1 == 6 || w_month_2 == 6)
@@ -193,7 +192,7 @@ public class Main
                 int date1 = w_day_1 + w_year_1;
                 int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
-                System.out.print(date + a);
+                System.out.print(date + result3);
             }
         }
         else if (w_month_1 == 7 || w_month_2 == 7)
@@ -210,7 +209,7 @@ public class Main
                 int date1 = w_day_1 + w_year_1;
                 int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
-                System.out.print(date + a);
+                System.out.print(date + result3);
             }
         }
         else if (w_month_1 == 8 || w_month_2 == 8)
@@ -227,7 +226,7 @@ public class Main
                 int date1 = w_day_1 + w_year_1;
                 int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
-                System.out.print(date + a);
+                System.out.print(date + result3);
             }
         }
         else if (w_month_1 == 9 || w_month_2 == 9)
@@ -244,7 +243,7 @@ public class Main
                 int date1 = w_day_1 + w_year_1;
                 int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
-                System.out.print(date + a);
+                System.out.print(date + result3);
             }
         }
         else if (w_month_1 == 10 || w_month_2 == 10)
@@ -261,7 +260,7 @@ public class Main
                 int date1 = w_day_1 + w_year_1;
                 int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
-                System.out.print(date + a);
+                System.out.print(date + result3);
             }
         }
         else if (w_month_1 == 11 || w_month_2 == 11)
@@ -278,7 +277,7 @@ public class Main
                 int date1 = w_day_1 + w_year_1;
                 int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
-                System.out.print(date + a);
+                System.out.print(date + result3);
             }
         }
         else if (w_month_1 == 12 || w_month_2 == 12)
@@ -295,7 +294,7 @@ public class Main
                 int date1 = w_day_1 + w_year_1;
                 int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
-                System.out.print(date + a);
+                System.out.print(date + result3);
             }
         }
     }
