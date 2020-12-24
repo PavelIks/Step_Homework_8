@@ -7,6 +7,10 @@ public class Main
     {
         int l_1(int intTest1);
     }
+    interface MyLamda2
+    {
+        int l_1(int intTest1, int intTest2, int intTest3);
+    }
     public static void main(String[] args)
     {
         /*Домашнее задание*/
@@ -41,18 +45,19 @@ public class Main
             System.out.println(" - не високосный!");
         }*/
 
-        MyLamda1 mylamda1;
-        MyLamda1 mylamda2;
-        MyLamda1 mylamda3;
-        MyLamda1 mylamda4;
-        MyLamda1 mylamda5;
-        MyLamda1 mylamda6;
-        mylamda1 = (w_day_1) -> w_day_1;
-        mylamda2 = (w_month_1) -> w_month_1;
-        mylamda3 = (w_year_1) -> w_year_1;
-        mylamda4 = (w_day_2) -> w_day_2;
-        mylamda5 = (w_month_2) -> w_month_2;
-        mylamda6 = (w_year_2) -> w_year_2;
+//        MyLamda1 mylamda1;
+//        MyLamda1 mylamda2;
+//        MyLamda1 mylamda3;
+//        MyLamda1 mylamda4;
+//        MyLamda1 mylamda5;
+//        MyLamda1 mylamda6;
+//        MyLamda1 mylamda7;
+//        mylamda1 = (w_day_1) -> w_day_1;
+//        mylamda2 = (w_month_1) -> w_month_1;
+//        mylamda3 = (w_year_1) -> w_year_1;
+//        mylamda4 = (w_day_2) -> w_day_2;
+//        mylamda5 = (w_month_2) -> w_month_2;
+//        mylamda6 = (w_year_2) -> w_year_2;
 
         Scanner in1 = new Scanner(System.in);
         System.out.print("Введите 1-ю дату - день: ");
@@ -78,34 +83,38 @@ public class Main
         System.out.print("Введите 2-ю дату - год: ");
         int w_year_2 = in6.nextInt();
 
-        int a1 = mylamda3.l_1(w_year_1) / 4 - mylamda3.l_1(w_year_1) / 100 + mylamda3.l_1(w_year_1) / 400;
-        int a2 = mylamda6.l_1(w_year_2) / 4 - mylamda6.l_1(w_year_2) / 100 + mylamda6.l_1(w_year_2) / 400;
-        int a = a1 - a2;
-        if (mylamda2.l_1(w_month_1) > 12 || mylamda5.l_1(w_month_2) > 12)
+        /*int a1 = w_year_1 / 4 - w_year_1 / 100 + w_year_1 / 400;*/
+        MyLamda1 mylamda1;
+        mylamda1 = (intTest1) -> intTest1 / 4 - intTest1 / 100 + intTest1 / 400;
+        int result1 = mylamda1.l_1(w_year_1);
+
+        int a2 = w_year_2 / 4 - w_year_2 / 100 + w_year_2 / 400;
+        int a = result1 - a2;
+        if (w_month_1 > 12 || w_month_2 > 12)
         {
             System.out.print("Месяцев менее 12!");
         }
-        else if (mylamda2.l_1(w_month_1) == 1 || mylamda5.l_1(w_month_2) == 1)
+        else if (w_month_1 == 1 || w_month_2 == 1)
         {
             int month_1 = 31;
-            if (mylamda1.l_1(w_day_1) > month_1 || mylamda4.l_1(w_day_2) > month_1)
+            if (w_day_1 > month_1 || w_day_2 > month_1)
             {
                 System.out.print("Достигнут лимит дней!");
             }
             else
             {
-                w_year_1 = mylamda3.l_1(w_year_1) * 365;
+                w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = mylamda1.l_1(w_day_1) + w_year_1;
-                int date2 = mylamda4.l_1(w_day_2) + w_year_2;
+                int date1 = w_day_1 + w_year_1;
+                int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
                 System.out.print(date + a);
             }
         }
-        else if (mylamda2.l_1(w_month_1) == 2 || mylamda5.l_1(w_month_2) == 2)
+        else if (w_month_1 == 2 || w_month_2 == 2)
         {
             int month_2 = 28;
-            if (mylamda1.l_1(w_day_1) > month_2 || mylamda4.l_1(w_day_2) > month_2)
+            if (w_day_1 > month_2 || w_day_2 > month_2)
             {
                 System.out.print("Достигнут лимит дней!");
             }
@@ -113,16 +122,16 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = mylamda1.l_1(w_day_1) + w_year_1;
-                int date2 = mylamda4.l_1(w_day_2) + w_year_2;
+                int date1 = w_day_1 + w_year_1;
+                int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
                 System.out.print(date + a);
             }
         }
-        else if (mylamda2.l_1(w_month_1) == 3 || mylamda5.l_1(w_month_2) == 3)
+        else if (w_month_1 == 3 || w_month_2 == 3)
         {
             int month_3 = 31;
-            if (mylamda1.l_1(w_day_1) > month_3 || mylamda4.l_1(w_day_2) > month_3)
+            if (w_day_1 > month_3 || w_day_2 > month_3)
             {
                 System.out.print("Достигнут лимит дней!");
             }
@@ -130,16 +139,16 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = mylamda1.l_1(w_day_1) + w_year_1;
-                int date2 = mylamda4.l_1(w_day_2) + w_year_2;
+                int date1 = w_day_1 + w_year_1;
+                int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
                 System.out.print(date + a);
             }
         }
-        else if (mylamda2.l_1(w_month_1) == 4 || mylamda5.l_1(w_month_2) == 4)
+        else if (w_month_1 == 4 || w_month_2 == 4)
         {
             int month_4 = 31;
-            if (mylamda1.l_1(w_day_1) > month_4 || mylamda4.l_1(w_day_2) > month_4)
+            if (w_day_1 > month_4 || w_day_2 > month_4)
             {
                 System.out.print("Достигнут лимит дней!");
             }
@@ -147,16 +156,16 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = mylamda1.l_1(w_day_1) + w_year_1;
-                int date2 = mylamda4.l_1(w_day_2) + w_year_2;
+                int date1 = w_day_1 + w_year_1;
+                int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
                 System.out.print(date + a);
             }
         }
-        else if (mylamda2.l_1(w_month_1) == 5 || mylamda5.l_1(w_month_2) == 5)
+        else if (w_month_1 == 5 || w_month_2 == 5)
         {
             int month_5 = 31;
-            if (mylamda1.l_1(w_day_1) > month_5 || mylamda4.l_1(w_day_2) > month_5)
+            if (w_day_1 > month_5 || w_day_2 > month_5)
             {
                 System.out.print("Достигнут лимит дней!");
             }
@@ -164,16 +173,16 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = mylamda1.l_1(w_day_1) + w_year_1;
-                int date2 = mylamda4.l_1(w_day_2) + w_year_2;
+                int date1 = w_day_1 + w_year_1;
+                int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
                 System.out.print(date + a);
             }
         }
-        else if (mylamda2.l_1(w_month_1) == 6 || mylamda5.l_1(w_month_2) == 6)
+        else if (w_month_1 == 6 || w_month_2 == 6)
         {
             int month_6 = 30;
-            if (mylamda1.l_1(w_day_1) > month_6 || mylamda4.l_1(w_day_2) > month_6)
+            if (w_day_1 > month_6 || w_day_2 > month_6)
             {
                 System.out.print("Достигнут лимит дней!");
             }
@@ -181,16 +190,16 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = mylamda1.l_1(w_day_1) + w_year_1;
-                int date2 = mylamda4.l_1(w_day_2) + w_year_2;
+                int date1 = w_day_1 + w_year_1;
+                int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
                 System.out.print(date + a);
             }
         }
-        else if (mylamda2.l_1(w_month_1) == 7 || mylamda5.l_1(w_month_2) == 7)
+        else if (w_month_1 == 7 || w_month_2 == 7)
         {
             int month_7 = 31;
-            if (mylamda1.l_1(w_day_1) > month_7 || mylamda4.l_1(w_day_2) > month_7)
+            if (w_day_1 > month_7 || w_day_2 > month_7)
             {
                 System.out.print("Достигнут лимит дней!");
             }
@@ -198,16 +207,16 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = mylamda1.l_1(w_day_1) + w_year_1;
-                int date2 = mylamda4.l_1(w_day_2) + w_year_2;
+                int date1 = w_day_1 + w_year_1;
+                int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
                 System.out.print(date + a);
             }
         }
-        else if (mylamda2.l_1(w_month_1) == 8 || mylamda5.l_1(w_month_2) == 8)
+        else if (w_month_1 == 8 || w_month_2 == 8)
         {
             int month_8 = 30;
-            if (mylamda1.l_1(w_day_1) > month_8 || mylamda4.l_1(w_day_2) > month_8)
+            if (w_day_1 > month_8 || w_day_2 > month_8)
             {
                 System.out.print("Достигнут лимит дней!");
             }
@@ -215,16 +224,16 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = mylamda1.l_1(w_day_1) + w_year_1;
-                int date2 = mylamda4.l_1(w_day_2) + w_year_2;
+                int date1 = w_day_1 + w_year_1;
+                int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
                 System.out.print(date + a);
             }
         }
-        else if (mylamda2.l_1(w_month_1) == 9 || mylamda5.l_1(w_month_2) == 9)
+        else if (w_month_1 == 9 || w_month_2 == 9)
         {
             int month_9 = 31;
-            if (mylamda1.l_1(w_day_1) > month_9 || mylamda4.l_1(w_day_2) > month_9)
+            if (w_day_1 > month_9 || w_day_2 > month_9)
             {
                 System.out.print("Достигнут лимит дней!");
             }
@@ -232,16 +241,16 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = mylamda1.l_1(w_day_1) + w_year_1;
-                int date2 = mylamda4.l_1(w_day_2) + w_year_2;
+                int date1 = w_day_1 + w_year_1;
+                int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
                 System.out.print(date + a);
             }
         }
-        else if (mylamda2.l_1(w_month_1) == 10 || mylamda5.l_1(w_month_2) == 10)
+        else if (w_month_1 == 10 || w_month_2 == 10)
         {
             int month_10 = 31;
-            if (mylamda1.l_1(w_day_1) > month_10 || mylamda4.l_1(w_day_2) > month_10)
+            if (w_day_1 > month_10 || w_day_2 > month_10)
             {
                 System.out.print("Достигнут лимит дней!");
             }
@@ -249,16 +258,16 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = mylamda1.l_1(w_day_1) + w_year_1;
-                int date2 = mylamda4.l_1(w_day_2) + w_year_2;
+                int date1 = w_day_1 + w_year_1;
+                int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
                 System.out.print(date + a);
             }
         }
-        else if (mylamda2.l_1(w_month_1) == 11 || mylamda5.l_1(w_month_2) == 11)
+        else if (w_month_1 == 11 || w_month_2 == 11)
         {
             int month_11 = 30;
-            if (mylamda1.l_1(w_day_1) > month_11 || mylamda4.l_1(w_day_2) > month_11)
+            if (w_day_1 > month_11 || w_day_2 > month_11)
             {
                 System.out.print("Достигнут лимит дней!");
             }
@@ -266,16 +275,16 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = mylamda1.l_1(w_day_1) + w_year_1;
-                int date2 = mylamda4.l_1(w_day_2) + w_year_2;
+                int date1 = w_day_1 + w_year_1;
+                int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
                 System.out.print(date + a);
             }
         }
-        else if (mylamda2.l_1(w_month_1) == 12 || mylamda5.l_1(w_month_2) == 12)
+        else if (w_month_1 == 12 || w_month_2 == 12)
         {
             int month_12 = 31;
-            if (mylamda1.l_1(w_day_1) > month_12 || mylamda4.l_1(w_day_2) > month_12)
+            if (w_day_1 > month_12 || w_day_2 > month_12)
             {
                 System.out.print("Достигнут лимит дней!");
             }
@@ -283,8 +292,8 @@ public class Main
             {
                 w_year_1 = w_year_1 * 365;
                 w_year_2 = w_year_2 * 365;
-                int date1 = mylamda1.l_1(w_day_1) + w_year_1;
-                int date2 = mylamda4.l_1(w_day_2) + w_year_2;
+                int date1 = w_day_1 + w_year_1;
+                int date2 = w_day_2 + w_year_2;
                 int date = date1 - date2;
                 System.out.print(date + a);
             }
