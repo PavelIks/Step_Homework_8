@@ -220,7 +220,14 @@ public class Main
 
                 /*int result14 = result12 - result13;*/
                 mylamda14 = (intTest1, intTest2) -> intTest1 - intTest2;
-                int result14 = mylamda14.l_1(result12, result13);
+                if(result12 > result13)
+                {
+                    int tmp = result12;
+                    result12 = result13;
+                    result13 = tmp;
+                }
+
+                int result14 = mylamda14.l_1(result13, result12);
 
                 /*System.out.print(result14 + result3);*/
                 mylamda15 = (intTest1, intTest2) -> intTest1 + intTest2;
@@ -255,7 +262,13 @@ public class Main
 
                 /*int result14 = result12 - result13;*/
                 mylamda14 = (intTest1, intTest2) -> intTest1 - intTest2;
-                int result14 = mylamda14.l_1(result12, result13);
+                if(result12 > result13)
+                {
+                    int tmp = result12;
+                    result12 = result13;
+                    result13 = tmp;
+                }
+                int result14 = mylamda14.l_1(result13, result12);
 
                 /*System.out.print(result14 + result3);*/
                 mylamda15 = (intTest1, intTest2) -> intTest1 + intTest2;
@@ -290,7 +303,13 @@ public class Main
 
                 /*int result14 = result12 - result13;*/
                 mylamda14 = (intTest1, intTest2) -> intTest1 - intTest2;
-                int result14 = mylamda14.l_1(result12, result13);
+                if(result12 > result13)
+                {
+                    int tmp = result12;
+                    result12 = result13;
+                    result13 = tmp;
+                }
+                int result14 = mylamda14.l_1(result13, result12);
 
                 /*System.out.print(result14 + result3);*/
                 mylamda15 = (intTest1, intTest2) -> intTest1 + intTest2;
@@ -325,7 +344,13 @@ public class Main
 
                 /*int result14 = result12 - result13;*/
                 mylamda14 = (intTest1, intTest2) -> intTest1 - intTest2;
-                int result14 = mylamda14.l_1(result12, result13);
+                if(result12 > result13)
+                {
+                    int tmp = result12;
+                    result12 = result13;
+                    result13 = tmp;
+                }
+                int result14 = mylamda14.l_1(result13, result12);
 
                 /*System.out.print(result14 + result3);*/
                 mylamda15 = (intTest1, intTest2) -> intTest1 + intTest2;
@@ -360,7 +385,13 @@ public class Main
 
                 /*int result14 = result12 - result13;*/
                 mylamda14 = (intTest1, intTest2) -> intTest1 - intTest2;
-                int result14 = mylamda14.l_1(result12, result13);
+                if(result12 > result13)
+                {
+                    int tmp = result12;
+                    result12 = result13;
+                    result13 = tmp;
+                }
+                int result14 = mylamda14.l_1(result13, result12);
 
                 /*System.out.print(result14 + result3);*/
                 mylamda15 = (intTest1, intTest2) -> intTest1 + intTest2;
@@ -395,7 +426,13 @@ public class Main
 
                 /*int result14 = result12 - result13;*/
                 mylamda14 = (intTest1, intTest2) -> intTest1 - intTest2;
-                int result14 = mylamda14.l_1(result12, result13);
+                if(result12 > result13)
+                {
+                    int tmp = result12;
+                    result12 = result13;
+                    result13 = tmp;
+                }
+                int result14 = mylamda14.l_1(result13, result12);
 
                 /*System.out.print(result14 + result3);*/
                 mylamda15 = (intTest1, intTest2) -> intTest1 + intTest2;
@@ -430,7 +467,13 @@ public class Main
 
                 /*int result14 = result12 - result13;*/
                 mylamda14 = (intTest1, intTest2) -> intTest1 - intTest2;
-                int result14 = mylamda14.l_1(result12, result13);
+                if(result12 > result13)
+                {
+                    int tmp = result12;
+                    result12 = result13;
+                    result13 = tmp;
+                }
+                int result14 = mylamda14.l_1(result13, result12);
 
                 /*System.out.print(result14 + result3);*/
                 mylamda15 = (intTest1, intTest2) -> intTest1 + intTest2;
@@ -465,7 +508,13 @@ public class Main
 
                 /*int result14 = result12 - result13;*/
                 mylamda14 = (intTest1, intTest2) -> intTest1 - intTest2;
-                int result14 = mylamda14.l_1(result12, result13);
+                if(result12 > result13)
+                {
+                    int tmp = result12;
+                    result12 = result13;
+                    result13 = tmp;
+                }
+                int result14 = mylamda14.l_1(result13, result12);
 
                 /*System.out.print(result14 + result3);*/
                 mylamda15 = (intTest1, intTest2) -> intTest1 + intTest2;
@@ -500,7 +549,13 @@ public class Main
 
                 /*int result14 = result12 - result13;*/
                 mylamda14 = (intTest1, intTest2) -> intTest1 - intTest2;
-                int result14 = mylamda14.l_1(result12, result13);
+                if(result12 > result13)
+                {
+                    int tmp = result12;
+                    result12 = result13;
+                    result13 = tmp;
+                }
+                int result14 = mylamda14.l_1(result13, result12);
 
                 /*System.out.print(result14 + result3);*/
                 mylamda15 = (intTest1, intTest2) -> intTest1 + intTest2;
@@ -535,7 +590,13 @@ public class Main
 
                 /*int result14 = result12 - result13;*/
                 mylamda14 = (intTest1, intTest2) -> intTest1 - intTest2;
-                int result14 = mylamda14.l_1(result12, result13);
+                if(result12 > result13)
+                {
+                    int tmp = result12;
+                    result12 = result13;
+                    result13 = tmp;
+                }
+                int result14 = mylamda14.l_1(result13, result12);
 
                 /*System.out.print(result14 + result3);*/
                 mylamda15 = (intTest1, intTest2) -> intTest1 + intTest2;
